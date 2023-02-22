@@ -1,0 +1,281 @@
+- code: "MA1001"
+  year: 1
+  title: "Elementary Differential Equations"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA1003"
+  year: 1
+  title: "Computing for Mathematics"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA1004"
+  year: 1
+  title: "Geometry"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA1005"
+  year: 1
+  title: "Foundations of Mathematics I"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA1006"
+  year: 1
+  title: "Foundations of Mathematics II"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA1008"
+  year: 1
+  title: "Linear Algebra I"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA1500"
+  year: 1
+  title: "Introduction to Probability Theory"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA1301"
+  year: 1
+  title: "Classical Mechanics"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA1501"
+  year: 1
+  title: "Statistical Inference"
+  credits: 10
+  prerequisites: "MA1001-MA1500"
+
+- code: "MA1801"
+  year: 1
+  title: "Finance I: Financial Markets and Corporate Financial Management"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2001"
+  year: 2
+  title: "Calculus of Several Variables"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2003"
+  year: 2
+  title: "Complex Analysis"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2004"
+  year: 2
+  title: "Series and Transforms"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2006"
+  year: 2
+  title: "Real Analysis"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2008"
+  year: 2
+  title: "Linear Algebra II"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA2011"
+  year: 2
+  title: "Introduction to Number Theory I"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2014"
+  year: 2
+  title: "Algebra I: Groups"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2301"
+  year: 2
+  title: "Vector Calculus"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2303"
+  year: 2
+  title: "Vibrations and Waves"
+  credits: 10
+  prerequisites: "MA1301"
+
+- code: "MA2320"
+  year: 2
+  title: "Modelling with Differential Equations"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2500"
+  year: 2
+  title: "Foundations of Probability and Statistics"
+  credits: 20
+  prerequisites: "MA1500"
+
+- code: "MA2601"
+  year: 2
+  title: "Operational Research"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA2701"
+  year: 2
+  title: "Numerical Analysis"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA2800"
+  year: 2
+  title: "Finance II: Investment Management"
+  credits: 10
+  prerequisites: "MA1801"
+
+- code: "MA2900"
+  year: 2
+  title: "Problem Solving"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3005"
+  year: 3
+  title: "Introduction to Functional and Fourier Analysis"
+  credits: 20
+  prerequisites: "MA2006"
+
+- code: "MA3007"
+  year: 3
+  title: "Coding Theory"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3008"
+  year: 3
+  title: "Algebraic Topology"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3011"
+  year: 3
+  title: "Introduction to Number Theory 2"
+  credits: 10
+  prerequisites: "MA2011"
+
+- code: "MA3012"
+  year: 3
+  title: "Ordinary Differential Equations"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3014"
+  year: 3
+  title: "Algebra II: Rings"
+  credits: 10
+  prerequisites: "MA2014"
+
+- code: "MA3015"
+  year: 3
+  title: "Algebra III: Fields"
+  credits: 10
+  prerequisites: "MA2014"
+
+- code: "MA3016"
+  year: 3
+  title: "Partial Differential Equations"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3018"
+  year: 3
+  title: "Measure Theory"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA3304"
+  year: 3
+  title: "Methods of Applied Mathematics"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA3305"
+  year: 3
+  title: "Fluid Dynamics"
+  credits: 20
+  prerequisites: "MA1301"
+
+- code: "MA3312"
+  year: 3
+  title: "Finite Elasticity"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3502"
+  year: 3
+  title: "Regression Analysis and Experimental Design"
+  credits: 20
+  prerequisites: "MA1501"
+
+- code: "MA3503"
+  year: 3
+  title: "Stochastic Processes for Finance and Insurance"
+  credits: 20
+  prerequisites: "MA2500"
+
+- code: "MA3504"
+  year: 3
+  title: "Official Statistics"
+  credits: 10
+  prerequisites: "MA1501"
+
+- code: "MA3506"
+  year: 3
+  title: "Multivariate Data Analysis"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3602"
+  year: 3
+  title: "Algorithms and Heuristics"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3603"
+  year: 3
+  title: "Optimisation"
+  credits: 20
+  prerequisites: "MA2601"
+
+- code: "MA3604"
+  year: 3
+  title: "Game Theory"
+  credits: 10
+  prerequisites: ""
+
+- code: "MA3800"
+  year: 3
+  title: "Behavioural Finance"
+  credits: 10
+  prerequisites: "MA2800"
+
+- code: "MA3901"
+  year: 3
+  title: "Introduction to Secondary School Mathematics Teaching"
+  credits: 20
+  prerequisites: ""
+
+- code: "MA3903"
+  year: 3
+  title: "Reading Module"
+  credits: 10
+  prerequisites: ""
