@@ -25,6 +25,17 @@ var update_counter = function(checkbox) {
     };
 };
 
+var all_prerequisites_checked = function(module_checkbox) {
+    prerequisites_string = module_checkbox.getAttribute('prerequisites')
+    if (prerequisites_string == ''){
+        return true;
+    }else{
+        let prerequisites = prerequisites_string.split("-");
+        const check = (preq) => document.getElementById(preq).checked;
+        return prerequisites.every(check)
+    };
+};
+
 
 var update_subsequent_modules = function(module_code, chosen) {
     modules = document.getElementsByClassName("module-checkbox")
@@ -32,7 +43,9 @@ var update_subsequent_modules = function(module_code, chosen) {
         let prerequisites_string = modules[mod].getAttribute('prerequisites')
         if (prerequisites_string.includes(module_code)){
             if (chosen){
-                modules[mod].disabled = false
+                if (all_prerequisites_checked(modules[mod])){
+                    modules[mod].disabled = false
+                }
             }else{
                 if (modules[mod].checked){
                     modules[mod].checked = false
