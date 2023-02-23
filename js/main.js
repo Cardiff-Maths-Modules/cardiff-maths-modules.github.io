@@ -73,3 +73,41 @@ var update_subsequent_modules = function(module_code, chosen) {
         }
     };
 };
+
+
+var display_info = function(module_checkbox) {
+    // This function is used when the mouse hovers over a button.
+    // This function takes in `module_checkbox`, an instance of the checkbox object
+    // It fills in the side panel with information about the module selected
+    let code = module_checkbox.id
+    let year = module_checkbox.getAttribute('year')
+    let title = module_checkbox.getAttribute('module_title')
+    let credits = module_checkbox.getAttribute('credits')
+
+    let content = "<h2>" + code + "</h2><h4 class='module_title_heading'><i>" + title + "</i></h4><p class='module_credits'>" + credits + " credits</p>"
+    let prerequisites_string = module_checkbox.getAttribute("prerequisites")
+    if (prerequisites_string != ''){
+        let prerequisites = prerequisites_string.split("-");
+        content = content.concat("<p><br>Prerequisites:")
+        for (let preq=0; preq < prerequisites.length; preq++) {
+            let preq_module = document.getElementById(prerequisites[preq])
+            if (preq_module.checked == false) {
+                content = content.concat("<br><m class='red_preq'>" + prerequisites[preq] + "</m>")
+            } else {
+                content = content.concat("<br>" + prerequisites[preq])
+            }
+        }
+        content = content.concat("</p>")
+    }    
+    document.getElementById("display-panel-" + year).innerHTML = content;
+};
+
+var remove_info = function(module_checkbox) {
+    // This function is used when the mouse stops hovering over a button.
+    // This function takes in `module_checkbox`, an instance of the checkbox object
+    // It removes information from the side panel
+    let year = module_checkbox.getAttribute('year')
+    document.getElementById("display-panel-" + year).innerHTML = "";
+};
+
+
