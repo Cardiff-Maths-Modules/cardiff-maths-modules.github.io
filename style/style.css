@@ -45,7 +45,6 @@
     color: #F1F1F1;
 }
 
-
 .panel-left {
     width: 70%;
     float: left;
@@ -118,10 +117,9 @@ img.emoji {
     font-weight: bold;
 }
 
-
-.input-group {
-    width: 70%;
-    padding-bottom: 20px;
+.options-row{
+    width: 73%;
+    padding-bottom: 20px
 }
 
 .form-check-input {
@@ -136,4 +134,17 @@ img.emoji {
     height: 40px;
     font-weight: normal;
     font-size: 18px;
+}
+
+.btn-reset {
+    width: 100%;
+    height: 40px;
+    background-color: #d3374a;
+    border-color: #BF2B3D;
+    font-size: 18px;
+}
+
+.btn-reset:hover, .btn-reset:focus, .btn-reset:active, .btn-reset.active {
+    background-color: #BF2B3D !important;
+    border-color: #A02433 !important;
 }

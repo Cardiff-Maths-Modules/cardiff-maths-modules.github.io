@@ -3,13 +3,20 @@ layout: main
 ---
 
 
-<div class="input-group">
-  <span class="input-group-addon">
-    <input class="form-check-input" type="checkbox" id="show_welsh" onchange="toggle_welsh_provision(this, 3)">
-  </span>
-  <label class="form-control">Include Welsh provision</label>
-</div>
- 
+<div class="row options-row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input class="form-check-input" type="checkbox" id="show_welsh" onchange="toggle_welsh_provision(this, 3)">
+      </span>
+      <label class="form-control">Include Welsh provision</label>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <input class="btn btn-primary btn-reset" value="Reset Choices" onclick="reset_all()">
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
 
 {% for year in (1..3) %}
 <div style="display: flex;">

@@ -171,3 +171,15 @@ var toggle_welsh_provision = function(welsh_checkbox, num_years) {
 
     }
 };
+
+
+var reset_all = function() {
+    // This function resets all choices
+    modules = document.getElementsByClassName("module-checkbox")
+    for (let mod = 0; mod < modules.length; mod++){
+        if (modules[mod].checked){ // only updates the counter if it was checked, and disabling the module unchecks it
+            modules[mod].checked = false
+            update_counter(modules[mod])
+        };
+    };
+};
