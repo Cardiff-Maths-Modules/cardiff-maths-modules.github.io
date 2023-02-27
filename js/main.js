@@ -46,6 +46,7 @@ var update_counter = function(module_checkbox) {
     }
 };
 
+
 var all_prerequisites_checked = function(module_checkbox) {
     // This function takes in `module_checkbox`, an instance of the checkbox object
     // and returns a Boolean indicating if _all_ its prerequisites are checked or not
@@ -102,8 +103,6 @@ var display_info = function(module_checkbox) {
     let offered_in_welsh = module_checkbox.getAttribute('welsh_code') != ''
     let show_welsh_provision = document.getElementById("show_welsh").checked;
 
-    console.log(show_welsh_provision)
-
     if (show_welsh_provision && offered_in_welsh) {
         content = "<h2>" + welsh_code + "</h2><h4 class='module_title_heading'><i>" + welsh_title + "</i></h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'>(" + welsh_credits + " credyd Cymraeg)</p>";
     } else {
@@ -115,11 +114,16 @@ var display_info = function(module_checkbox) {
         let prerequisites = prerequisites_string.split("-");
         content = content.concat("<p><br>Prerequisites:")
         for (let preq=0; preq < prerequisites.length; preq++) {
-            let preq_module = document.getElementById(prerequisites[preq])
+            let preq_module = document.getElementById(prerequisites[preq]);
+            let preq_offered_in_welsh = preq_module.getAttribute('welsh_code') != ''
+            let preq_code = preq_module.getAttribute('id');
+            if (preq_offered_in_welsh && show_welsh_provision){
+                preq_code = preq_module.getAttribute('welsh_code');
+            }
             if (preq_module.checked == false) {
-                content = content.concat("<br><m class='red_preq'>" + prerequisites[preq] + "</m>")
+                content = content.concat("<br><m class='red_preq'>" + preq_code + "</m>")
             } else {
-                content = content.concat("<br>" + prerequisites[preq])
+                content = content.concat("<br>" + preq_code)
             }
         }
         content = content.concat("</p>")
@@ -137,14 +141,33 @@ var remove_info = function(module_checkbox) {
 
 
 var toggle_welsh_provision = function(welsh_checkbox, num_years) {
+    // This funtion is used when the 'include welsh provision' is checked or unchecked.
+    // If checked, it:
+    //     + Displays the number of Welsh credits chosen
+    //     + Changes the code of Welsh modules to bilingual or Welsh codes
+    // If unchecked, it:
+    //     + Hides the number of Welsh credits chosen
+    //     + Changed the code of Welsh modules to standard codes
+    modules = document.getElementsByClassName("module-checkbox-label")
     if (welsh_checkbox.checked == true) {
-        for  (let year=1; year <= num_years; year++) {
+        for (let year=1; year <= num_years; year++) {
             document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "Credydau Cymraeg: " + welsh_credits_selected[year];
+        }
+        for (let mod = 0; mod < modules.length; mod++) {
+            if (modules[mod].getAttribute('welsh_code') != '') {
+                modules[mod].innerHTML = modules[mod].getAttribute('welsh_code')
+            }
         }
     }
     if (welsh_checkbox.checked == false) {
-        for  (let year=1; year <= num_years; year++) {
+        for (let year=1; year <= num_years; year++) {
             document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "";
         }
+        for (let mod = 0; mod < modules.length; mod++) {
+            if (modules[mod].getAttribute('welsh_code') != '') {
+                modules[mod].innerHTML = modules[mod].getAttribute('module_code')
+            }
+        }
+
     }
 };

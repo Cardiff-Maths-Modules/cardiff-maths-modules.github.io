@@ -36,7 +36,7 @@ layout: main
                             welsh_credits="{{ module.welsh-credits }}"
                             welsh_code="{{ module.welsh-code }}"
                             onchange="update_counter(this, true)">
-                        <span>{{ module.code }}</span>
+                        <span class="module-checkbox-label" module_code="{{ module.code }}" welsh_code="{{ module.welsh-code }}">{{ module.code }}</span>
                     </label>
                 </div>
             {% else %}
@@ -58,7 +58,7 @@ layout: main
                             welsh_code="{{ module.welsh-code }}"
                             onchange="update_counter(this, true)"
                             disabled>
-                        <span>{{ module.code }}</span>
+                        <span class="module-checkbox-label" module_code="{{ module.code }}" welsh_code="{{ module.welsh-code }}">{{ module.code }}</span>
                     </label>
                 </div>
             {% endif %}
