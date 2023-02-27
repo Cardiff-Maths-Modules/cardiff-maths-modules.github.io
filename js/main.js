@@ -1,4 +1,5 @@
 var credits_selected = {"1":0, "2":0, "3":0};
+var welsh_credits_selected = {"1":0, "2":0, "3":0};
 
 var update_counter = function(module_checkbox) {
     // This function takes in a `module_checkbox`, an instance of the checkbox object.
@@ -12,26 +13,37 @@ var update_counter = function(module_checkbox) {
     let year = module_checkbox.getAttribute('year')
     let credits = parseInt(module_checkbox.getAttribute('credits'))
     let id = module_checkbox.id
+    let welsh_credits = parseInt(module_checkbox.getAttribute('welsh_credits'))
+    let offered_in_welsh = module_checkbox.getAttribute('welsh_code') != ''
 
     if(module_checkbox.checked == true){
         credits_selected[year] += credits;
+        if (offered_in_welsh) {
+            welsh_credits_selected[year] += welsh_credits
+        }
         update_subsequent_modules(id, true)
         if (credits_selected[year] == 120){
             emoji = twemoji.parse('✔️')
         } else if (credits_selected[year] > 120) {
             emoji = twemoji.parse('❌')
         };
-        document.getElementById("year-" + year + "-counter").innerHTML = emoji + " Credits Selected: " + credits_selected[year];
      } else {
         credits_selected[year] -= credits;
+        if (offered_in_welsh) {
+            welsh_credits_selected[year] -= welsh_credits
+        }
         update_subsequent_modules(id, false)
         if (credits_selected[year] == 120){
             emoji = twemoji.parse('✔️')
         } else if (credits_selected[year] > 120) {
             emoji = twemoji.parse('❌')
         };
-        document.getElementById("year-" + year + "-counter").innerHTML = emoji + " Credits Selected: " + credits_selected[year];
     };
+    document.getElementById("year-" + year + "-counter").innerHTML = emoji + " Credits Selected: " + credits_selected[year];
+    let show_welsh_provision = document.getElementById("show_welsh").checked;
+    if (show_welsh_provision){
+        document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "Credydau Cymraeg: " + welsh_credits_selected[year];
+    }
 };
 
 var all_prerequisites_checked = function(module_checkbox) {
@@ -83,8 +95,21 @@ var display_info = function(module_checkbox) {
     let year = module_checkbox.getAttribute('year')
     let title = module_checkbox.getAttribute('module_title')
     let credits = module_checkbox.getAttribute('credits')
+    
+    let welsh_code = module_checkbox.getAttribute('welsh_code')
+    let welsh_title = module_checkbox.getAttribute('welsh_title')
+    let welsh_credits = parseInt(module_checkbox.getAttribute('welsh_credits'))
+    let offered_in_welsh = module_checkbox.getAttribute('welsh_code') != ''
+    let show_welsh_provision = document.getElementById("show_welsh").checked;
 
-    let content = "<h2>" + code + "</h2><h4 class='module_title_heading'><i>" + title + "</i></h4><p class='module_credits'>" + credits + " credits</p>"
+    console.log(show_welsh_provision)
+
+    if (show_welsh_provision && offered_in_welsh) {
+        content = "<h2>" + welsh_code + "</h2><h4 class='module_title_heading'><i>" + welsh_title + "</i></h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'>(" + welsh_credits + " credyd Cymraeg)</p>";
+    } else {
+        content = "<h2>" + code + "</h2><h4 class='module_title_heading'><i>" + title + "</i></h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'></p>";
+    }
+
     let prerequisites_string = module_checkbox.getAttribute("prerequisites")
     if (prerequisites_string != ''){
         let prerequisites = prerequisites_string.split("-");
@@ -111,3 +136,15 @@ var remove_info = function(module_checkbox) {
 };
 
 
+var toggle_welsh_provision = function(welsh_checkbox, num_years) {
+    if (welsh_checkbox.checked == true) {
+        for  (let year=1; year <= num_years; year++) {
+            document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "Credydau Cymraeg: " + welsh_credits_selected[year];
+        }
+    }
+    if (welsh_checkbox.checked == false) {
+        for  (let year=1; year <= num_years; year++) {
+            document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "";
+        }
+    }
+};

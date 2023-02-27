@@ -3,42 +3,63 @@
   title: "Elementary Differential Equations"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA1051"
+  welsh-title: "Hafaliadau Differol Elfennol"
+  welsh-credits: 5
 
 - code: "MA1003"
   year: 1
   title: "Computing for Mathematics"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA1053"
+  welsh-title: "Cyfrifiadureg ar gyfer Mathemateg"
+  welsh-credits: 10
 
 - code: "MA1004"
   year: 1
   title: "Geometry"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA1054"
+  welsh-title: "Geometreg"
+  welsh-credits: 5
 
 - code: "MA1005"
   year: 1
   title: "Foundations of Mathematics I"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA1055"
+  welsh-title: "Seiliau Mathemateg I"
+  welsh-credits: 10
 
 - code: "MA1006"
   year: 1
   title: "Foundations of Mathematics II"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA1056"
+  welsh-title: "Seiliau Mathemateg II"
+  welsh-credits: 10
 
 - code: "MA1008"
   year: 1
   title: "Linear Algebra I"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA1058"
+  welsh-title: "Algebra Llinol I"
+  welsh-credits: 5
 
 - code: "MA1500"
   year: 1
   title: "Introduction to Probability Theory"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA1550"
+  welsh-title: "Cyflwyniad i Theori Tebygolrwydd"
+  welsh-credits: 5
 
 - code: "MA1301"
   year: 1
@@ -63,30 +84,45 @@
   title: "Calculus of Several Variables"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA2051"
+  welsh-title: "Calcwlws Aml-Newidyn"
+  welsh-credits: 5
 
 - code: "MA2003"
   year: 2
   title: "Complex Analysis"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA2053"
+  welsh-title: "Dadansoddi Cymhlyg"
+  welsh-credits: 5
 
 - code: "MA2004"
   year: 2
   title: "Series and Transforms"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA2054"
+  welsh-title: "Cyfresi a Thrawsffurfiau"
+  welsh-credits: 5
 
 - code: "MA2006"
   year: 2
   title: "Real Analysis"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA2056"
+  welsh-title: "Dadansoddi Real"
+  welsh-credits: 5
 
 - code: "MA2008"
   year: 2
   title: "Linear Algebra II"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA2058"
+  welsh-title: "Algebra Llinol II"
+  welsh-credits: 10
 
 - code: "MA2011"
   year: 2
@@ -123,12 +159,18 @@
   title: "Foundations of Probability and Statistics"
   credits: 20
   prerequisites: "MA1500"
+  welsh-code: "MA2550"
+  welsh-title: "Seiliau Tebygolrwydd ac Ystadegaeth"
+  welsh-credits: 10
 
 - code: "MA2601"
   year: 2
   title: "Operational Research"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA2651"
+  welsh-title: "Ymchwil Weithrediadol"
+  welsh-credits: 5
 
 - code: "MA2701"
   year: 2
@@ -147,6 +189,9 @@
   title: "Problem Solving"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA2901"
+  welsh-title: "Datrys Problemau"
+  welsh-credits: 10
 
 - code: "MA3005"
   year: 3
@@ -249,6 +294,9 @@
   title: "Algorithms and Heuristics"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA3652"
+  welsh-title: "Algorithmau a Dulliau Hewristig"
+  welsh-credits: 5
 
 - code: "MA3603"
   year: 3
@@ -273,9 +321,15 @@
   title: "Introduction to Secondary School Mathematics Teaching"
   credits: 20
   prerequisites: ""
+  welsh-code: "MA3900"
+  welsh-title: "Cyflwyniad i Addysgu Mathemateg mewn Ysgol Uwchradd"
+  welsh-credits: 20
 
 - code: "MA3903"
   year: 3
   title: "Reading Module"
   credits: 10
   prerequisites: ""
+  welsh-code: "MA3952"
+  welsh-title: "Modiwl Darllen"
+  welsh-credits: 10

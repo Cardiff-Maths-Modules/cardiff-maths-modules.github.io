@@ -72,9 +72,15 @@
     font-size: 22px
 }
 
-.panel-footer {
+.panel-footer-right {
     font-size: 22px;
     text-align: right;
+}
+
+.panel-footer-left {
+    font-size: 22px;
+    text-align: left;
+    float: left;
 }
 
 img.emoji {
@@ -110,4 +116,24 @@ img.emoji {
 .red_preq {
     color: #d3374a;
     font-weight: bold;
+}
+
+
+.input-group {
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.form-check-input {
+    height: 24px;
+    width: 24px;
+    accent-color: #d3374a;
+}
+
+.form-control {
+    min-height: 40px;
+    max-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    font-size: 18px;
 }
