@@ -61,19 +61,60 @@ var all_prerequisites_checked = function(module_checkbox) {
 };
 
 
+var clash_is_checked = function(clash_code) {
+    // This function takes in module cose string, an instance of the checkbox object
+    // and returns a Boolean indicating it's checked or not,
+    // returns false if module does not exist.
+    let clash_checkbox = document.getElementById(clash_code);
+    if (clash_checkbox) {
+        return clash_checkbox.checked
+    }else{
+        return false
+    };
+};
+
+
+var any_clashes_checked = function(module_checkbox) {
+    // This function takes in `module_checkbox`, an instance of the checkbox object
+    // and returns a Boolean indicating if _any_ its clashes are checked or not
+    clashes_string = module_checkbox.getAttribute('clashes')
+    if (clashes_string == ''){
+        return false;
+    }else{
+        let clashes = clashes_string.split("-");
+        const check = (clsh) => clash_is_checked(clsh);
+        return clashes.some(check)
+    };
+};
+
+
 var update_subsequent_modules = function(module_code, chosen) {
     // This function takes in;
     //     + `module_code`, a string of the module code currently being checked of unchecked
     //     + `chosen`, a Boolean: 'true' if the module is being checked, 'false' if it is being unchecked.
-    // It loops through each module, checks whether the current module is one of its prerequisites, and then:
+    // It first loops through all that modules clashes, either disabling or un-disabling the clashed module as appropriate.
+    // Then it loops through each module, checks whether the current module is one of its prerequisites, and then:
     //     + disables that module if `chosen` is false (updating the counter if disabling a checked module)
-    //     + enables the current module if _all_ prerequisited for that module are not checked.
+    //     + enables the current module if _all_ prerequisites for that module are not checked.
+    
+    this_module = document.getElementById(module_code)
+    let clashes_string = this_module.getAttribute('clashes')
+    if (clashes_string != '') {
+        clashes = clashes_string.split("-");
+        for (let clsh = 0; clsh < clashes.length; clsh++) {
+            clashed_module = document.getElementById(clashes[clsh])
+            if (clashed_module && all_prerequisites_checked(clashed_module)) {
+                clashed_module.disabled = chosen
+            }
+        }
+    }
+
     modules = document.getElementsByClassName("module-checkbox")
     for (let mod = 0; mod < modules.length; mod++){
         let prerequisites_string = modules[mod].getAttribute('prerequisites')
         if (prerequisites_string.includes(module_code)){
             if (chosen){
-                if (all_prerequisites_checked(modules[mod])){ // checks if _all_ prerequisites are checked
+                if (all_prerequisites_checked(modules[mod]) && !any_clashes_checked(modules[mod]) ){ // checks if _all_ prerequisites are checked _and_ if _not_ _any_ clashes are checked
                     modules[mod].disabled = false
                 }
             }else{

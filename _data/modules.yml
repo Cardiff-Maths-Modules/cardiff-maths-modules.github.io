@@ -237,6 +237,35 @@
   title: "Finite Elasticity"
   credits: 10
 
+- code: "MA3391"
+  year: 3
+  title: "Project Module (Full Year)"
+  credits: 20
+  prerequisites: "MA1004"
+  clashes: "MA3392-MA3393"
+  welsh-code: "MA3970"
+  welsh-title: "Modiwl Prosiect (Blwyddyn Cyfan)"
+  welsh-credits: 20
+
+
+- code: "MA3392"
+  year: 3
+  title: "Project Module (Half Year - Autumn Semester)"
+  credits: 10
+  clashes: "MA3391-MA3393"
+  welsh-code: "MA3971"
+  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester yr Hydref)"
+  welsh-credits: 10
+
+- code: "MA3393"
+  year: 3
+  title: "Project Module (Half Year - Spring Semester)"
+  credits: 10
+  clashes: "MA3391-MA3392-MA1000"
+  welsh-code: "MA3972"
+  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester y Gwanwyn)"
+  welsh-credits: 10
+
 - code: "MA3502"
   year: 3
   title: "Regression Analysis and Experimental Design"
