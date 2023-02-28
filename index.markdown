@@ -25,7 +25,7 @@ layout: main
   <div class="panel-body">
     {% for module in site.data.modules %}
         {% if module.year == year %}
-            {% if module.prerequisites == '' %}
+            {% if module.prerequisites %}
                 <div
                     class="module-button {{ module.code }}"
                     onmouseover="display_info({{ module.code }})"
@@ -42,7 +42,8 @@ layout: main
                             welsh_title="{{ module.welsh-title }}"
                             welsh_credits="{{ module.welsh-credits }}"
                             welsh_code="{{ module.welsh-code }}"
-                            onchange="update_counter(this, true)">
+                            onchange="update_counter(this, true)"
+                            disabled>
                         <span class="module-checkbox-label" module_code="{{ module.code }}" welsh_code="{{ module.welsh-code }}">{{ module.code }}</span>
                     </label>
                 </div>
@@ -63,8 +64,7 @@ layout: main
                             welsh_title="{{ module.welsh-title }}"
                             welsh_credits="{{ module.welsh-credits }}"
                             welsh_code="{{ module.welsh-code }}"
-                            onchange="update_counter(this, true)"
-                            disabled>
+                            onchange="update_counter(this, true)">
                         <span class="module-checkbox-label" module_code="{{ module.code }}" welsh_code="{{ module.welsh-code }}">{{ module.code }}</span>
                     </label>
                 </div>
