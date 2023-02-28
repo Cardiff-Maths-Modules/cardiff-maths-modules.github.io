@@ -168,7 +168,29 @@ var display_info = function(module_checkbox) {
             }
         }
         content = content.concat("</p>")
-    }    
+    }
+
+    let clashes_string = module_checkbox.getAttribute("clashes")
+    if (clashes_string != ''){
+        let clashes = clashes_string.split("-");
+        content = content.concat("<p><br>Clashes:")
+        for (let clsh=0; clsh < clashes.length; clsh++) {
+            let clash_module = document.getElementById(clashes[clsh]);
+            if (clash_module) {
+                let clsh_offered_in_welsh = clash_module.getAttribute('welsh_code') != ''
+                let clsh_code = clash_module.getAttribute('id');
+                if (clsh_offered_in_welsh && show_welsh_provision){
+                    clsh_code = clash_module.getAttribute('welsh_code');
+                }
+                if (clash_module.checked == true) {
+                    content = content.concat("<br><m class='red_preq'>" + clsh_code + "</m>")
+                } else {
+                    content = content.concat("<br>" + clsh_code)
+                }
+            }
+        }
+        content = content.concat("</p>")
+    }
     document.getElementById("display-panel-" + year).innerHTML = content;
 };
 
