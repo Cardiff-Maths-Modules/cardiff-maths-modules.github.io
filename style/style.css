@@ -8,7 +8,7 @@
     background-color: #A2A2A2;
     color: #FFFFFF;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 12px;
     float: left;
 }
 
@@ -20,8 +20,8 @@
     max-height: 50px;
     line-height: 40px;
     display: block;
-    border: 4px solid #878787;
-    border-radius: 14px;
+    border: 3px solid #878787;
+    border-radius: 12px;
 }
 
 .module-button label input {
@@ -31,16 +31,16 @@
 
 .module-button input:checked + span {
     background-color: #d3374a;
-    border: 4px solid #BF2B3D;
+    border: 3px solid #BF2B3D;
 }
 
 .module-button input:hover + span {
-    border: 4px solid #BF2B3D;
+    border: 3px solid #BF2B3D;
 }
 
 .module-button input:disabled + span {
     background-color: #E4E4E4;
-    border: 4px solid #E4E4E4;
+    border: 3px solid #E4E4E4;
     text-decoration: line-through;
     color: #F1F1F1;
 }
@@ -127,6 +127,7 @@ img.emoji {
     width: 24px;
     accent-color: #d3374a;
 }
+
 
 .form-control {
     min-height: 40px;
