@@ -1,4 +1,4 @@
 ---
 layout: selector
-degree: GXXX
+degree: 15R4
 ---

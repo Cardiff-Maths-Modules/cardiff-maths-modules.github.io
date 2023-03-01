@@ -64,7 +64,6 @@
   title: "Statistical Inference"
   credits: 10
   prerequisites:
-    - "MA1001"
     - "MA1500"
 
 - code: "MA1801"
@@ -149,6 +148,11 @@
   welsh-title: "Seiliau Tebygolrwydd ac Ystadegaeth"
   welsh-credits: 10
 
+- code: "MA2502"
+  year: 2
+  title: "Computational Statistics"
+  credits: 10
+
 - code: "MA2601"
   year: 2
   title: "Operational Research"
@@ -162,16 +166,31 @@
   title: "Numerical Analysis"
   credits: 10
 
+- code: "MA2760"
+  year: 2
+  title: "Mathematical Investigations with Python"
+  credits: 10
+  clashes:
+    - "MA2900"
+
 - code: "MA2800"
   year: 2
   title: "Finance II: Investment Management"
   credits: 10
-  prerequisites: "MA1801"
+  prerequisites:
+    - "MA1801"
+
+- code: "MA2801"
+  year: 2
+  title: "Econometrics for Financial Mathematics"
+  credits: 10
 
 - code: "MA2900"
   year: 2
   title: "Problem Solving"
   credits: 10
+  clashes:
+    - "MA2760"
   welsh-code: "MA2901"
   welsh-title: "Datrys Problemau"
   welsh-credits: 10
@@ -195,7 +214,7 @@
 
 - code: "MA3011"
   year: 3
-  title: "Introduction to Number Theory 2"
+  title: "Introduction to Number Theory II"
   credits: 10
   prerequisites:
     - "MA2011"
@@ -249,15 +268,12 @@
   year: 3
   title: "Project Module (Full Year)"
   credits: 20
-  prerequisites:
-    - "MA1004"
   clashes:
     - "MA3392"
     - "MA3393"
   welsh-code: "MA3970"
   welsh-title: "Modiwl Prosiect (Blwyddyn Cyfan)"
   welsh-credits: 20
-
 
 - code: "MA3392"
   year: 3
@@ -277,7 +293,6 @@
   clashes:
     - "MA3391"
     - "MA3392"
-    - "MA1000"
   welsh-code: "MA3972"
   welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester y Gwanwyn)"
   welsh-credits: 10
@@ -335,6 +350,26 @@
   prerequisites:
     - "MA2800"
 
+- code: "MA3801"
+  year: 3
+  title: "Market Microstructure and Trading Theory"
+  credits: 10
+  prerequisites:
+    - "MA2800"
+
+- code: "MA3804"
+  year: 3
+  title: "Trading, Market Design and Applications"
+  credits: 10
+  prerequisites:
+    - "MA3801"
+    - "MA3503"
+
+- code: "MA3805"
+  year: 3
+  title: "Quantitative Risk Management"
+  credits: 10
+
 - code: "MA3901"
   year: 3
   title: "Introduction to Secondary School Mathematics Teaching"
@@ -350,3 +385,93 @@
   welsh-code: "MA3952"
   welsh-title: "Modiwl Darllen"
   welsh-credits: 10
+
+- code: "MA3XXX"
+  year: 3
+  title: "Mathematics of Artificial Intelligence"
+  credits: 10
+  prerequisites:
+    - "MA1500"
+
+- code: "MA4003"
+  year: 4
+  title: "Theoretical Fluid Dynamics"
+  credits: 10
+  prerequisites:
+    - "MA3305"
+
+- code: "MA4016"
+  year: 4
+  title: "Quantum Information"
+  credits: 10
+  prerequisites:
+    - "MA2008"
+    - "MA3005"
+
+- code: "MA4309"
+  year: 4
+  title: "Mathematical Biology"
+  credits: 10
+
+- code: "MA4511"
+  year: 4
+  title: "Statistics of Big Data"
+  credits: 20
+  prerequisites:
+    - "MA2500"
+    - "MA3502"
+
+- code: "MA4512"
+  year: 4
+  title: "Credit Risk Scoring"
+  credits: 10
+
+- code: "MA4514"
+  year: 4
+  title: "Statistical Programming with R and Shiny"
+  credits: 10
+
+- code: "MA4601"
+  year: 4
+  title: "Stochastic Search and Optimisation"
+  credits: 10
+
+- code: "MA4606"
+  year: 4
+  title: "Supply Chain Modelling"
+  credits: 10
+
+- code: "MA4609"
+  year: 4
+  title: "Healthcare Modelling"
+  credits: 10
+
+- code: "MA4900"
+  year: 4
+  title: "MMath Project"
+  credits: 40
+  welsh-code: "MA4970"
+  welsh-title: "Prosiect MMath"
+  welsh-credits: 40
+
+- code: "MA4901"
+  year: 4
+  title: "Reading Module"
+  credits: 10
+
+- code: "MA4902"
+  year: 4
+  title: "Reading Module"
+  credits: 10
+
+- code: "MA4XXX"
+  year: 4
+  title: "Calculus of Variations"
+  credits: 10
+
+- code: "MA4YYY"
+  year: 4
+  title: "Advanced Topics in Analysis: Sobolev Spaces and Elliptic PDEs"
+  credits: 10
+  prerequisites:
+    - "MA2006"
