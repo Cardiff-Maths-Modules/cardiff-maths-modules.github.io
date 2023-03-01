@@ -16,6 +16,7 @@
   <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/style/style.css">
@@ -32,6 +33,7 @@
   <div class="degree_title">{{ degree.title }}</div>
 </div>
 
+
 <div class="row options-row">
   <div class="col-lg-6 col40">
     <div class="input-group">
@@ -47,7 +49,68 @@
   <div class="col-lg-6 col30">
     <a class="btn btn-primary btn-reset" href="/">Change Degree Scheme</a>
   </div>
+
+  <div class="container info-container">
+  <a href="#info" class="btn btn-info" data-toggle="collapse" onclick="change_glyph(this)">More information...<span style="float: right;" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+  <div id="info" class="collapse information-box">
+    Click on the modules listed below to select them. Modules can be in one of three states:
+
+    <table class="info-table">
+      <tr class="info-row">
+        <td class="info-cell">
+            <div class="module-button module-button-info-selected">
+                <label>
+                	<span
+                	class="module-checkbox-label"
+                	module_code="MA0000"
+                	welsh_code="MA0000"
+                	core_indicator=''
+                	>MA0000</span>
+                </label>
+            </div>
+        </td>
+        <td class="info-cell">
+        	<div class="module-button module-button-info-unselected">
+                <label>
+                	<span
+                	class="module-checkbox-label"
+                	module_code="MA0000"
+                	welsh_code="MA0000"
+                	core_indicator=''
+                	>MA0000</span>
+                </label>
+            </div>
+        </td>
+        <td class="info-cell">
+        	<div class="module-button module-button-info-disabled">
+                <label>
+                	<span
+                	class="module-checkbox-label"
+                	module_code="MA0000"
+                	welsh_code="MA0000"
+                	core_indicator=''
+                	>MA0000</span>
+                </label>
+            </div>
+        </td>
+      </tr>
+      <tr">
+        <td class="info-cell">This module has been selected</td>
+        <td class="info-cell">This module is not selected but is available.</td>
+        <td class="info-cell">This module is unavailable due to unselected prerequisites or clashing modules.</td>
+      </tr>
+    </table>
+
+    A ⭑ indicates that the module is core for the chosen degree scheme.
+    The number of selected credits is shown at the bottom of each year box.
+    Additional module information is in the left panel by hovering the mouse over a module.
+  </div>
 </div>
+</div>
+
+
+
+
 
 
 {% assign years = degree.years| split:"-" %}

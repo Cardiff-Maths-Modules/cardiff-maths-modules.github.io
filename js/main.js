@@ -245,3 +245,16 @@ var reset_all = function() {
         };
     };
 };
+
+
+var change_glyph = function(collapser) {
+    // This swaps the arrow from down to up, and vice versa, on clicking.
+    let down = 'More information...<span style="float: right;" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
+    let up = 'More information...<span style="float: right;" class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>';
+    if (collapser.innerHTML == down) {
+        collapser.innerHTML = up
+    } else {
+        collapser.innerHTML = down
+    }
+}
+
