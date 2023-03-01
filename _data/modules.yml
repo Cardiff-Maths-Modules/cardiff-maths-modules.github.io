@@ -63,7 +63,9 @@
   year: 1
   title: "Statistical Inference"
   credits: 10
-  prerequisites: "MA1001-MA1500"
+  prerequisites:
+    - "MA1001"
+    - "MA1500"
 
 - code: "MA1801"
   year: 1
@@ -129,7 +131,8 @@
   year: 2
   title: "Vibrations and Waves"
   credits: 10
-  prerequisites: "MA1301"
+  prerequisites:
+    - "MA1301"
 
 - code: "MA2320"
   year: 2
@@ -140,7 +143,8 @@
   year: 2
   title: "Foundations of Probability and Statistics"
   credits: 20
-  prerequisites: "MA1500"
+  prerequisites:
+    - "MA1500"
   welsh-code: "MA2550"
   welsh-title: "Seiliau Tebygolrwydd ac Ystadegaeth"
   welsh-credits: 10
@@ -176,7 +180,8 @@
   year: 3
   title: "Introduction to Functional and Fourier Analysis"
   credits: 20
-  prerequisites: "MA2006"
+  prerequisites:
+    - "MA2006"
 
 - code: "MA3007"
   year: 3
@@ -192,7 +197,8 @@
   year: 3
   title: "Introduction to Number Theory 2"
   credits: 10
-  prerequisites: "MA2011"
+  prerequisites:
+    - "MA2011"
 
 - code: "MA3012"
   year: 3
@@ -203,13 +209,15 @@
   year: 3
   title: "Algebra II: Rings"
   credits: 10
-  prerequisites: "MA2014"
+  prerequisites:
+    - "MA2014"
 
 - code: "MA3015"
   year: 3
   title: "Algebra III: Fields"
   credits: 10
-  prerequisites: "MA2014"
+  prerequisites:
+    - "MA2014"
 
 - code: "MA3016"
   year: 3
@@ -241,8 +249,11 @@
   year: 3
   title: "Project Module (Full Year)"
   credits: 20
-  prerequisites: "MA1004"
-  clashes: "MA3392-MA3393"
+  prerequisites:
+    - "MA1004"
+  clashes:
+    - "MA3392"
+    - "MA3393"
   welsh-code: "MA3970"
   welsh-title: "Modiwl Prosiect (Blwyddyn Cyfan)"
   welsh-credits: 20
@@ -252,7 +263,9 @@
   year: 3
   title: "Project Module (Half Year - Autumn Semester)"
   credits: 10
-  clashes: "MA3391-MA3393"
+  clashes:
+    - "MA3391"
+    - "MA3393"
   welsh-code: "MA3971"
   welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester yr Hydref)"
   welsh-credits: 10
@@ -261,7 +274,10 @@
   year: 3
   title: "Project Module (Half Year - Spring Semester)"
   credits: 10
-  clashes: "MA3391-MA3392-MA1000"
+  clashes:
+    - "MA3391"
+    - "MA3392"
+    - "MA1000"
   welsh-code: "MA3972"
   welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester y Gwanwyn)"
   welsh-credits: 10
@@ -270,19 +286,22 @@
   year: 3
   title: "Regression Analysis and Experimental Design"
   credits: 20
-  prerequisites: "MA1501"
+  prerequisites:
+    - "MA1501"
 
 - code: "MA3503"
   year: 3
   title: "Stochastic Processes for Finance and Insurance"
   credits: 20
-  prerequisites: "MA2500"
+  prerequisites:
+    - "MA2500"
 
 - code: "MA3504"
   year: 3
   title: "Official Statistics"
   credits: 10
-  prerequisites: "MA1501"
+  prerequisites:
+    - "MA1501"
 
 - code: "MA3506"
   year: 3
@@ -301,7 +320,8 @@
   year: 3
   title: "Optimisation"
   credits: 20
-  prerequisites: "MA2601"
+  prerequisites:
+    - "MA2601"
 
 - code: "MA3604"
   year: 3
@@ -312,7 +332,8 @@
   year: 3
   title: "Behavioural Finance"
   credits: 10
-  prerequisites: "MA2800"
+  prerequisites:
+    - "MA2800"
 
 - code: "MA3901"
   year: 3

@@ -1,0 +1,4 @@
+---
+layout: selector
+degree: GXXX
+---

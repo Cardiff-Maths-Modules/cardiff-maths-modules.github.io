@@ -45,6 +45,11 @@
     color: #F1F1F1;
 }
 
+.core {
+    /*text-decoration: overline white;*/
+    text-decoration: underline wavy white;
+}
+
 .panel-left {
     width: 70%;
     float: left;
@@ -118,7 +123,6 @@ img.emoji {
 }
 
 .options-row{
-    width: 73%;
     padding-bottom: 20px
 }
 
@@ -128,6 +132,17 @@ img.emoji {
     accent-color: #d3374a;
 }
 
+.col30 {
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
+}
+
+.col40 {
+    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
+}
 
 .form-control {
     min-height: 40px;
@@ -138,14 +153,50 @@ img.emoji {
 }
 
 .btn-reset {
-    width: 100%;
     height: 40px;
     background-color: #d3374a;
     border-color: #BF2B3D;
     font-size: 18px;
+    width: 100%;
+    color: white !important;
 }
 
 .btn-reset:hover, .btn-reset:focus, .btn-reset:active, .btn-reset.active {
     background-color: #BF2B3D !important;
     border-color: #A02433 !important;
+    color: white !important;
+}
+
+.degree_info {
+    display: flex;
+}
+
+.degree_code {
+    color: #d3374a;
+    font-size: 60px;
+    font-weight: bold;
+    float: left;
+    margin-right: 15px;
+}
+
+.degree_title {
+    font-size: 26px;
+    font-style: italic;
+    float: left;
+    align-self: flex-end;
+    padding-bottom: 15px;
+    color: #878787;
+}
+
+.select_degree {
+    font-size: 26px;
+    font-style: italic;
+    padding-bottom: 15px;
+    color: #878787;
+    margin-left: 5px;
+}
+
+.list-group-item {
+    color: #d3374a !important;
+    font-size: 22px;
 }

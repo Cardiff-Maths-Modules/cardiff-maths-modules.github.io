@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Cardiff Maths Module Choosing Tool</title>
+  <meta name="generator" content="Jekyll v4.0.1" />
+  <meta property="og:title" content="Cardiff Maths Module Choosing Tool" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:site_name" content="Cardiff Maths Module Choosing Tool" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Cardiff Maths Module Choosing Tool" />
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+
+
+<body>
+<main class="page-content" aria-label="Content">
+<div class="wrapper">
+
+{% assign degree = site.data.degrees[page.degree] %}
+<div class="panel panel-body degree_info">
+  <div class="degree_code">{{ page.degree }}</div>
+  <div class="degree_title">{{ degree.title }}</div>
+</div>
+
+<div class="row options-row">
+  <div class="col-lg-6 col40">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input class="form-check-input" type="checkbox" id="show_welsh" onchange="toggle_welsh_provision(this, 3)">
+      </span>
+      <label class="form-control">Include Welsh provision</label>
+    </div>
+  </div>
+  <div class="col-lg-6 col30">
+    <a class="btn btn-primary btn-reset" onclick="reset_all()">Reset Choices</a>
+  </div>
+  <div class="col-lg-6 col30">
+    <a class="btn btn-primary btn-reset" href="/">Change Degree Scheme</a>
+  </div>
+</div>
+
+
+{% assign years = degree.years| split:"-" %}
+{% for year in years %}
+<div style="display: flex;">
+<div class="panel panel-default panel-left">
+  <div class="panel-heading">Year {{ year }}</div>
+  <div class="panel-body">
+    {% for module in site.data.modules %}
+        {% if year contains module.year %}
+            {% assign core_indicator = '' %}
+            {% if degree.core-modules contains module.code %}
+                {% assign core_indicator = '⭑' %}
+            {% endif %}
+            {% if degree.core-modules contains module.code or degree.optional-modules contains module.code %}
+                {% if module.prerequisites %}
+                    <div
+                        class="module-button {{ module.code }}"
+                        onmouseover="display_info({{ module.code }})"
+                        onmouseout="remove_info({{ module.code }})">
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="module-checkbox"
+                                id="{{ module.code }}"
+                                module_title="{{ module.title }}"
+                                prerequisites="{{ module.prerequisites }}"
+                                clashes="{{ module.clashes }}"
+                                credits="{{ module.credits }}"
+                                year="{{ year }}"
+                                welsh_title="{{ module.welsh-title }}"
+                                welsh_credits="{{ module.welsh-credits }}"
+                                welsh_code="{{ module.welsh-code }}"
+                                onchange="update_counter(this, true)"
+                                disabled>
+                            <span
+                                class="module-checkbox-label {{ core }}"
+                                module_code="{{ module.code }}"
+                                welsh_code="{{ module.welsh-code }}"
+                                core_indicator="{{ core_indicator }}"
+                             >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
+                            </span>
+                        </label>
+                    </div>
+                {% else %}
+                    <div
+                        class="module-button {{ module.code }}"
+                        onmouseover="display_info({{ module.code }})"
+                        onmouseout="remove_info({{ module.code }})">
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="module-checkbox"
+                                id="{{ module.code }}"
+                                module_title="{{ module.title }}"
+                                prerequisites="{{ module.prerequisites }}"
+                                clashes="{{ module.clashes }}"
+                                credits="{{ module.credits }}"
+                                year="{{ year }}"
+                                welsh_title="{{ module.welsh-title }}"
+                                welsh_credits="{{ module.welsh-credits }}"
+                                welsh_code="{{ module.welsh-code }}"
+                                onchange="update_counter(this, true)">
+                            <span
+                                class="module-checkbox-label {{ core }}"
+                                module_code="{{ module.code }}"
+                                welsh_code="{{ module.welsh-code }}"
+                                core_indicator="{{ core_indicator }}"
+                            >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
+                            </span>
+                        </label>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+  </div>
+  <div class="panel-footer">
+    <div class="panel-footer-left" id="year-{{ year }}-counter-cymraeg"></div>
+    <div class="panel-footer-right" id="year-{{ year }}-counter">Credits Selected: 0</div>
+</div>
+</div>
+<div class="panel panel-default panel-right"><div class="panel-right-body" id="display-panel-{{ year }}"></div></div>
+</div>
+{% endfor %}
+
+
+</div>
+</body>
+
+</html>

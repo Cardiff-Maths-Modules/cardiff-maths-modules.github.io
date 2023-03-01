@@ -54,7 +54,7 @@ var all_prerequisites_checked = function(module_checkbox) {
     if (prerequisites_string == ''){
         return true;
     }else{
-        let prerequisites = prerequisites_string.split("-");
+        let prerequisites = prerequisites_string.split(/(?=M)/g);
         const check = (preq) => document.getElementById(preq).checked;
         return prerequisites.every(check)
     };
@@ -81,7 +81,7 @@ var any_clashes_checked = function(module_checkbox) {
     if (clashes_string == ''){
         return false;
     }else{
-        let clashes = clashes_string.split("-");
+        let clashes = clashes_string.split(/(?=M)/g);
         const check = (clsh) => clash_is_checked(clsh);
         return clashes.some(check)
     };
@@ -100,7 +100,7 @@ var update_subsequent_modules = function(module_code, chosen) {
     this_module = document.getElementById(module_code)
     let clashes_string = this_module.getAttribute('clashes')
     if (clashes_string != '') {
-        clashes = clashes_string.split("-");
+        clashes = clashes_string.split(/(?=M)/g);
         for (let clsh = 0; clsh < clashes.length; clsh++) {
             clashed_module = document.getElementById(clashes[clsh])
             if (clashed_module && all_prerequisites_checked(clashed_module)) {
@@ -152,7 +152,7 @@ var display_info = function(module_checkbox) {
 
     let prerequisites_string = module_checkbox.getAttribute("prerequisites")
     if (prerequisites_string != ''){
-        let prerequisites = prerequisites_string.split("-");
+        let prerequisites = prerequisites_string.split(/(?=M)/g);
         content = content.concat("<p><br>Prerequisites:")
         for (let preq=0; preq < prerequisites.length; preq++) {
             let preq_module = document.getElementById(prerequisites[preq]);
@@ -172,7 +172,7 @@ var display_info = function(module_checkbox) {
 
     let clashes_string = module_checkbox.getAttribute("clashes")
     if (clashes_string != ''){
-        let clashes = clashes_string.split("-");
+        let clashes = clashes_string.split(/(?=M)/g);
         content = content.concat("<p><br>Clashes:")
         for (let clsh=0; clsh < clashes.length; clsh++) {
             let clash_module = document.getElementById(clashes[clsh]);
@@ -218,7 +218,7 @@ var toggle_welsh_provision = function(welsh_checkbox, num_years) {
         }
         for (let mod = 0; mod < modules.length; mod++) {
             if (modules[mod].getAttribute('welsh_code') != '') {
-                modules[mod].innerHTML = modules[mod].getAttribute('welsh_code')
+                modules[mod].innerHTML = modules[mod].getAttribute('core_indicator') + ' ' + modules[mod].getAttribute('welsh_code') + ' ' + modules[mod].getAttribute('core_indicator')
             }
         }
     }
@@ -228,10 +228,9 @@ var toggle_welsh_provision = function(welsh_checkbox, num_years) {
         }
         for (let mod = 0; mod < modules.length; mod++) {
             if (modules[mod].getAttribute('welsh_code') != '') {
-                modules[mod].innerHTML = modules[mod].getAttribute('module_code')
+                modules[mod].innerHTML = modules[mod].getAttribute('core_indicator') + ' ' + modules[mod].getAttribute('module_code') + ' ' + modules[mod].getAttribute('core_indicator')
             }
         }
-
     }
 };
 
