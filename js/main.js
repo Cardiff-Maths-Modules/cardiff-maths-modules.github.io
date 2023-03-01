@@ -1,5 +1,5 @@
-var credits_selected = {"1":0, "2":0, "3":0};
-var welsh_credits_selected = {"1":0, "2":0, "3":0};
+var credits_selected = {"1":0, "2":0, "3":0, "4":0};
+var welsh_credits_selected = {"1":0, "2":0, "3":0, "4":0};
 
 var update_counter = function(module_checkbox) {
     // This function takes in a `module_checkbox`, an instance of the checkbox object.
