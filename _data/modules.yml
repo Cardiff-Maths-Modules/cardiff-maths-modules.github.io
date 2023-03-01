@@ -2,6 +2,7 @@
   year: 1
   title: "Elementary Differential Equations"
   credits: 10
+  semester: 'Spring'
   welsh-code: "MA1051"
   welsh-title: "Hafaliadau Differol Elfennol"
   welsh-credits: 5
@@ -10,6 +11,7 @@
   year: 1
   title: "Computing for Mathematics"
   credits: 20
+  semester: "Both"
   welsh-code: "MA1053"
   welsh-title: "Cyfrifiadureg ar gyfer Mathemateg"
   welsh-credits: 10
@@ -18,6 +20,7 @@
   year: 1
   title: "Geometry"
   credits: 10
+  semester: 'Autumn'
   welsh-code: "MA1054"
   welsh-title: "Geometreg"
   welsh-credits: 5
@@ -26,6 +29,7 @@
   year: 1
   title: "Foundations of Mathematics I"
   credits: 20
+  semester: "Autumn"
   welsh-code: "MA1055"
   welsh-title: "Seiliau Mathemateg I"
   welsh-credits: 10
@@ -34,6 +38,7 @@
   year: 1
   title: "Foundations of Mathematics II"
   credits: 20
+  semester: "Spring"
   welsh-code: "MA1056"
   welsh-title: "Seiliau Mathemateg II"
   welsh-credits: 10
@@ -42,6 +47,7 @@
   year: 1
   title: "Linear Algebra I"
   credits: 10
+  semester: 'Autumn'
   welsh-code: "MA1058"
   welsh-title: "Algebra Llinol I"
   welsh-credits: 5
@@ -50,6 +56,7 @@
   year: 1
   title: "Introduction to Probability Theory"
   credits: 10
+  semester: 'Autumn'
   welsh-code: "MA1550"
   welsh-title: "Cyflwyniad i Theori Tebygolrwydd"
   welsh-credits: 5
@@ -58,11 +65,13 @@
   year: 1
   title: "Classical Mechanics"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA1501"
   year: 1
   title: "Statistical Inference"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA1500"
 
@@ -70,11 +79,13 @@
   year: 1
   title: "Finance I: Financial Markets and Corporate Financial Management"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA2001"
   year: 2
   title: "Calculus of Several Variables"
   credits: 10
+  semester: 'Autumn'
   welsh-code: "MA2051"
   welsh-title: "Calcwlws Aml-Newidyn"
   welsh-credits: 5
@@ -83,6 +94,7 @@
   year: 2
   title: "Complex Analysis"
   credits: 10
+  semester: 'Spring'
   welsh-code: "MA2053"
   welsh-title: "Dadansoddi Cymhlyg"
   welsh-credits: 5
@@ -91,6 +103,7 @@
   year: 2
   title: "Series and Transforms"
   credits: 10
+  semester: 'Spring'
   welsh-code: "MA2054"
   welsh-title: "Cyfresi a Thrawsffurfiau"
   welsh-credits: 5
@@ -99,6 +112,7 @@
   year: 2
   title: "Real Analysis"
   credits: 10
+  semester: 'Spring'
   welsh-code: "MA2056"
   welsh-title: "Dadansoddi Real"
   welsh-credits: 5
@@ -107,6 +121,7 @@
   year: 2
   title: "Linear Algebra II"
   credits: 20
+  semester: "Autumn"
   welsh-code: "MA2058"
   welsh-title: "Algebra Llinol II"
   welsh-credits: 10
@@ -115,21 +130,25 @@
   year: 2
   title: "Introduction to Number Theory I"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA2014"
   year: 2
   title: "Algebra I: Groups"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA2301"
   year: 2
   title: "Vector Calculus"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA2303"
   year: 2
   title: "Vibrations and Waves"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA1301"
 
@@ -137,11 +156,13 @@
   year: 2
   title: "Modelling with Differential Equations"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA2500"
   year: 2
   title: "Foundations of Probability and Statistics"
   credits: 20
+  semester: "Autumn"
   prerequisites:
     - "MA1500"
   welsh-code: "MA2550"
@@ -152,11 +173,13 @@
   year: 2
   title: "Computational Statistics"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA2601"
   year: 2
   title: "Operational Research"
   credits: 20
+  semester: "Spring"
   welsh-code: "MA2651"
   welsh-title: "Ymchwil Weithrediadol"
   welsh-credits: 5
@@ -165,11 +188,13 @@
   year: 2
   title: "Numerical Analysis"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA2760"
   year: 2
   title: "Mathematical Investigations with Python"
   credits: 10
+  semester: 'Spring'
   clashes:
     - "MA2900"
 
@@ -177,6 +202,7 @@
   year: 2
   title: "Finance II: Investment Management"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA1801"
 
@@ -184,11 +210,13 @@
   year: 2
   title: "Econometrics for Financial Mathematics"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA2900"
   year: 2
   title: "Problem Solving"
   credits: 10
+  semester: 'Autumn'
   clashes:
     - "MA2760"
   welsh-code: "MA2901"
@@ -199,6 +227,7 @@
   year: 3
   title: "Introduction to Functional and Fourier Analysis"
   credits: 20
+  semester: "Spring"
   prerequisites:
     - "MA2006"
 
@@ -206,16 +235,19 @@
   year: 3
   title: "Coding Theory"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3008"
   year: 3
   title: "Algebraic Topology"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3011"
   year: 3
   title: "Introduction to Number Theory II"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA2011"
 
@@ -223,11 +255,13 @@
   year: 3
   title: "Ordinary Differential Equations"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3014"
   year: 3
   title: "Algebra II: Rings"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA2014"
 
@@ -235,6 +269,7 @@
   year: 3
   title: "Algebra III: Fields"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA2014"
 
@@ -242,32 +277,38 @@
   year: 3
   title: "Partial Differential Equations"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA3018"
   year: 3
   title: "Measure Theory"
   credits: 20
+  semester: "Autumn"
 
 - code: "MA3304"
   year: 3
   title: "Methods of Applied Mathematics"
   credits: 20
+  semester: "Autumn"
 
 - code: "MA3305"
   year: 3
   title: "Fluid Dynamics"
   credits: 20
+  semester: "Autumn"
   prerequisites: "MA1301"
 
 - code: "MA3312"
   year: 3
   title: "Finite Elasticity"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3391"
   year: 3
   title: "Project Module (Full Year)"
   credits: 20
+  semester: "Both"
   clashes:
     - "MA3392"
     - "MA3393"
@@ -277,30 +318,33 @@
 
 - code: "MA3392"
   year: 3
-  title: "Project Module (Half Year - Autumn Semester)"
+  title: "Project Module (Half Year)"
   credits: 10
+  semester: 'Autumn'
   clashes:
     - "MA3391"
     - "MA3393"
   welsh-code: "MA3971"
-  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester yr Hydref)"
+  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn)"
   welsh-credits: 10
 
 - code: "MA3393"
   year: 3
-  title: "Project Module (Half Year - Spring Semester)"
+  title: "Project Module (Half Year)"
   credits: 10
+  semester: 'Spring'
   clashes:
     - "MA3391"
     - "MA3392"
   welsh-code: "MA3972"
-  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn - Semester y Gwanwyn)"
+  welsh-title: "Modiwl Prosiect (Hanner Blwyddyn)"
   welsh-credits: 10
 
 - code: "MA3502"
   year: 3
   title: "Regression Analysis and Experimental Design"
   credits: 20
+  semester: "Spring"
   prerequisites:
     - "MA1501"
 
@@ -308,6 +352,7 @@
   year: 3
   title: "Stochastic Processes for Finance and Insurance"
   credits: 20
+  semester: "Autumn"
   prerequisites:
     - "MA2500"
 
@@ -315,6 +360,7 @@
   year: 3
   title: "Official Statistics"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA1501"
 
@@ -322,11 +368,13 @@
   year: 3
   title: "Multivariate Data Analysis"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3602"
   year: 3
   title: "Algorithms and Heuristics"
   credits: 10
+  semester: 'Spring'
   welsh-code: "MA3652"
   welsh-title: "Algorithmau a Dulliau Hewristig"
   welsh-credits: 5
@@ -335,6 +383,7 @@
   year: 3
   title: "Optimisation"
   credits: 20
+  semester: "Autumn"
   prerequisites:
     - "MA2601"
 
@@ -342,11 +391,13 @@
   year: 3
   title: "Game Theory"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3800"
   year: 3
   title: "Behavioural Finance"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA2800"
 
@@ -354,6 +405,7 @@
   year: 3
   title: "Market Microstructure and Trading Theory"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA2800"
 
@@ -361,6 +413,7 @@
   year: 3
   title: "Trading, Market Design and Applications"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA3801"
     - "MA3503"
@@ -369,11 +422,13 @@
   year: 3
   title: "Quantitative Risk Management"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA3901"
   year: 3
   title: "Introduction to Secondary School Mathematics Teaching"
   credits: 20
+  semester: "Autumn"
   welsh-code: "MA3900"
   welsh-title: "Cyflwyniad i Addysgu Mathemateg mewn Ysgol Uwchradd"
   welsh-credits: 20
@@ -382,6 +437,7 @@
   year: 3
   title: "Reading Module"
   credits: 10
+  semester: 'Autumn'
   welsh-code: "MA3952"
   welsh-title: "Modiwl Darllen"
   welsh-credits: 10
@@ -390,6 +446,7 @@
   year: 3
   title: "Mathematics of Artificial Intelligence"
   credits: 10
+  semester: 'Autumn'
   prerequisites:
     - "MA1500"
 
@@ -397,6 +454,7 @@
   year: 4
   title: "Theoretical Fluid Dynamics"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA3305"
 
@@ -404,6 +462,7 @@
   year: 4
   title: "Quantum Information"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA2008"
     - "MA3005"
@@ -412,11 +471,13 @@
   year: 4
   title: "Mathematical Biology"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA4511"
   year: 4
   title: "Statistics of Big Data"
   credits: 20
+  semester: "Both"
   prerequisites:
     - "MA2500"
     - "MA3502"
@@ -425,26 +486,31 @@
   year: 4
   title: "Credit Risk Scoring"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4514"
   year: 4
   title: "Statistical Programming with R and Shiny"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4601"
   year: 4
   title: "Stochastic Search and Optimisation"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4606"
   year: 4
   title: "Supply Chain Modelling"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4609"
   year: 4
   title: "Healthcare Modelling"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4900"
   year: 4
@@ -453,25 +519,30 @@
   welsh-code: "MA4970"
   welsh-title: "Prosiect MMath"
   welsh-credits: 40
+  semester: 'Both'
 
 - code: "MA4901"
   year: 4
   title: "Reading Module"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA4902"
   year: 4
   title: "Reading Module"
   credits: 10
+  semester: 'Spring'
 
 - code: "MA4XXX"
   year: 4
   title: "Calculus of Variations"
   credits: 10
+  semester: 'Autumn'
 
 - code: "MA4YYY"
   year: 4
   title: "Advanced Topics in Analysis: Sobolev Spaces and Elliptic PDEs"
   credits: 10
+  semester: 'Spring'
   prerequisites:
     - "MA2006"

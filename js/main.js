@@ -137,6 +137,11 @@ var display_info = function(module_checkbox) {
     let year = module_checkbox.getAttribute('year')
     let title = module_checkbox.getAttribute('module_title')
     let credits = module_checkbox.getAttribute('credits')
+    let semester = module_checkbox.getAttribute('semester')
+    let extra_s = '';
+    if (semester == 'Both'){
+        extra_s = 's';
+    }
     
     let welsh_code = module_checkbox.getAttribute('welsh_code')
     let welsh_title = module_checkbox.getAttribute('welsh_title')
@@ -145,9 +150,9 @@ var display_info = function(module_checkbox) {
     let show_welsh_provision = document.getElementById("show_welsh").checked;
 
     if (show_welsh_provision && offered_in_welsh) {
-        content = "<h2>" + welsh_code + "</h2><h4 class='module_title_heading'><i>" + welsh_title + "</i></h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'>(" + welsh_credits + " credyd Cymraeg)</p>";
+        content = "<h2>" + welsh_code + "</h2><h4 class='module_title_heading'><i>" + welsh_title + "</i></h4><h4 class='module_semester'>" + semester + " semester" + extra_s + "</h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'>(" + welsh_credits + " credyd Cymraeg)</p>";
     } else {
-        content = "<h2>" + code + "</h2><h4 class='module_title_heading'><i>" + title + "</i></h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'></p>";
+        content = "<h2>" + code + "</h2><h4 class='module_title_heading'><i>" + title + "</i></h4><h4 class='module_semester'>" + semester + " semester" + extra_s + "</h4><p class='module_credits'>" + credits + " credits</p><p class='module_credits'></p>";
     }
 
     let prerequisites_string = module_checkbox.getAttribute("prerequisites")
@@ -194,6 +199,7 @@ var display_info = function(module_checkbox) {
     document.getElementById("display-panel-" + year).innerHTML = content;
 };
 
+
 var remove_info = function(module_checkbox) {
     // This function is used when the mouse stops hovering over a button.
     // This function takes in `module_checkbox`, an instance of the checkbox object
@@ -203,7 +209,7 @@ var remove_info = function(module_checkbox) {
 };
 
 
-var toggle_welsh_provision = function(welsh_checkbox, num_years) {
+var toggle_welsh_provision = function(welsh_checkbox, years_list) {
     // This funtion is used when the 'include welsh provision' is checked or unchecked.
     // If checked, it:
     //     + Displays the number of Welsh credits chosen
@@ -212,8 +218,10 @@ var toggle_welsh_provision = function(welsh_checkbox, num_years) {
     //     + Hides the number of Welsh credits chosen
     //     + Changed the code of Welsh modules to standard codes
     modules = document.getElementsByClassName("module-checkbox-label")
+    let years_string = String(years_list)
     if (welsh_checkbox.checked == true) {
-        for (let year=1; year <= num_years; year++) {
+        for (let y=0; y < years_string.length; y++) {
+            let year = years_string[y];
             document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "Credydau Cymraeg: " + welsh_credits_selected[year];
         }
         for (let mod = 0; mod < modules.length; mod++) {
@@ -223,7 +231,8 @@ var toggle_welsh_provision = function(welsh_checkbox, num_years) {
         }
     }
     if (welsh_checkbox.checked == false) {
-        for (let year=1; year <= num_years; year++) {
+        for (let y=0; y < years_string.length; y++) {
+            let year = years_string[y];
             document.getElementById("year-" + year + "-counter-cymraeg").innerHTML = "";
         }
         for (let mod = 0; mod < modules.length; mod++) {

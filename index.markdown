@@ -2,7 +2,7 @@
 layout: main
 ---
 
-<h1 style="font-weight: bold;">Cardiff Mathematics Module Choosing Tool</h1>
+<h1 style="font-weight: bold; margin-bottom: 30px;">Cardiff Mathematics Module Choosing Tool</h1>
 
 <div class="select_degree">Select degree scheme...</div>
 

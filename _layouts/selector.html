@@ -28,6 +28,7 @@
 <div class="wrapper">
 
 {% assign degree = site.data.degrees[page.degree] %}
+{% assign years = degree.years | split:"-" %}
 <div class="panel panel-body degree_info">
   <div class="degree_code">{{ page.degree }}</div>
   <div class="degree_title">{{ degree.title }}</div>
@@ -38,7 +39,7 @@
   <div class="col-lg-6 col40">
     <div class="input-group">
       <span class="input-group-addon">
-        <input class="form-check-input" type="checkbox" id="show_welsh" onchange="toggle_welsh_provision(this, 3)">
+        <input class="form-check-input" type="checkbox" id="show_welsh" onchange="toggle_welsh_provision(this, {{ years }})">
       </span>
       <label class="form-control">Include Welsh provision</label>
     </div>
@@ -104,94 +105,72 @@
     A ⭑ indicates that the module is core for the chosen degree scheme.
     The number of selected credits is shown at the bottom of each year box.
     Additional module information is in the left panel by hovering the mouse over a module.
+    Modules are laid out first by those offered in the Autumn semester, then those covering both semesters, then those offered in the Spring semester.
   </div>
 </div>
 </div>
 
 
 
-
-
-
-{% assign years = degree.years| split:"-" %}
 {% for year in years %}
 <div style="display: flex;">
 <div class="panel panel-default panel-left">
   <div class="panel-heading">Year {{ year }}</div>
-  <div class="panel-body">
-    {% for module in site.data.modules %}
-        {% if year contains module.year %}
-            {% assign core_indicator = '' %}
-            {% if degree.core-modules contains module.code %}
-                {% assign core_indicator = '⭑' %}
-            {% endif %}
-            {% if degree.core-modules contains module.code or degree.optional-modules contains module.code %}
-                {% if module.prerequisites %}
-                    <div
-                        class="module-button {{ module.code }}"
-                        onmouseover="display_info({{ module.code }})"
-                        onmouseout="remove_info({{ module.code }})">
-                        <label>
-                            <input
-                                type="checkbox"
-                                class="module-checkbox"
-                                id="{{ module.code }}"
-                                module_title="{{ module.title }}"
-                                prerequisites="{{ module.prerequisites }}"
-                                clashes="{{ module.clashes }}"
-                                credits="{{ module.credits }}"
-                                year="{{ year }}"
-                                welsh_title="{{ module.welsh-title }}"
-                                welsh_credits="{{ module.welsh-credits }}"
-                                welsh_code="{{ module.welsh-code }}"
-                                onchange="update_counter(this, true)"
-                                disabled>
-                            <span
-                                class="module-checkbox-label {{ core }}"
-                                module_code="{{ module.code }}"
-                                welsh_code="{{ module.welsh-code }}"
-                                core_indicator="{{ core_indicator }}"
-                             >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
-                            </span>
-                        </label>
-                    </div>
-                {% else %}
-                    <div
-                        class="module-button {{ module.code }}"
-                        onmouseover="display_info({{ module.code }})"
-                        onmouseout="remove_info({{ module.code }})">
-                        <label>
-                            <input
-                                type="checkbox"
-                                class="module-checkbox"
-                                id="{{ module.code }}"
-                                module_title="{{ module.title }}"
-                                prerequisites="{{ module.prerequisites }}"
-                                clashes="{{ module.clashes }}"
-                                credits="{{ module.credits }}"
-                                year="{{ year }}"
-                                welsh_title="{{ module.welsh-title }}"
-                                welsh_credits="{{ module.welsh-credits }}"
-                                welsh_code="{{ module.welsh-code }}"
-                                onchange="update_counter(this, true)">
-                            <span
-                                class="module-checkbox-label {{ core }}"
-                                module_code="{{ module.code }}"
-                                welsh_code="{{ module.welsh-code }}"
-                                core_indicator="{{ core_indicator }}"
-                            >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
-                            </span>
-                        </label>
-                    </div>
-                {% endif %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-  </div>
+  {% assign semesters = 'Autumn-Both-Spring' | split: "-" %}
+  {% for semester in (0..2) %}
+      <div class="panel-body">
+      {% for module in site.data.modules %}
+          {% if year contains module.year %}
+              {% if module.semester == semesters[semester] %}
+                  {% assign core_indicator = '' %}
+                  {% if degree.core-modules contains module.code %}
+                      {% assign core_indicator = '⭑' %}
+                  {% endif %}
+                  {% if degree.core-modules contains module.code or degree.optional-modules contains module.code %}
+                      {% assign is_disabled = '' %}
+                      {% if module.prerequisites %}
+                          {% assign is_disabled = 'disabled' %}
+                      {% endif %}
+                      <div
+                          class="module-button {{ module.code }}"
+                          onmouseover="display_info({{ module.code }})"
+                          onmouseout="remove_info({{ module.code }})">
+                          <label>
+                              <input
+                                  type="checkbox"
+                                  class="module-checkbox"
+                                  id="{{ module.code }}"
+                                  module_title="{{ module.title }}"
+                                  prerequisites="{{ module.prerequisites }}"
+                                  clashes="{{ module.clashes }}"
+                                  credits="{{ module.credits }}"
+                                  year="{{ year }}"
+                                  semester="{{ module.semester }}"
+                                  welsh_title="{{ module.welsh-title }}"
+                                  welsh_credits="{{ module.welsh-credits }}"
+                                  welsh_code="{{ module.welsh-code }}"
+                                  onchange="update_counter(this, true)"
+                                  {{ is_disabled }}>
+                              <span
+                                  class="module-checkbox-label {{ core }}"
+                                  module_code="{{ module.code }}"
+                                  welsh_code="{{ module.welsh-code }}"
+                                  core_indicator="{{ core_indicator }}"
+                               >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
+                              </span>
+                          </label>
+                      </div>
+                  {% endif %}
+              {% endif %}
+          {% endif %}
+      {% endfor %}
+      </div>
+      <hr>
+  {% endfor %}
   <div class="panel-footer">
     <div class="panel-footer-left" id="year-{{ year }}-counter-cymraeg"></div>
     <div class="panel-footer-right" id="year-{{ year }}-counter">Credits Selected: 0</div>
-</div>
+  </div>
 </div>
 <div class="panel panel-default panel-right"><div class="panel-right-body" id="display-panel-{{ year }}"></div></div>
 </div>
