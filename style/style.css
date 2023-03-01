@@ -208,7 +208,7 @@ img.emoji {
 
 .btn-info {
     margin-top: 15px;
-    color: black !important;
+    color: #555555 !important;
     background-color: #f5f5f5;
     border-color: #ddd; 
     font-size: 18px;
@@ -218,15 +218,15 @@ img.emoji {
 }
 
 .btn-info:focus {
-    color: black;
+    color: #555555;
     background-color: #f5f5f5;
     border-color: #ddd; 
 }
 
 .btn-info:hover, .btn-info:active {
-    color: white !important;
-    background-color: #d3374a !important;
-    border-color: #BF2B3D !important;
+    color: #555555 !important;
+    background-color: #DCDCDC !important;
+    border-color: #B5B5B5 !important;
 }
 
 .information-box {
