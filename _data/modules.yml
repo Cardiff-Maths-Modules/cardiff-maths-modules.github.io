@@ -543,6 +543,6 @@
   year: 4
   title: "Advanced Topics in Analysis: Sobolev Spaces and Elliptic PDEs"
   credits: 10
-  semester: 'Spring'
+  semester: 'Autumn'
   prerequisites:
     - "MA2006"
