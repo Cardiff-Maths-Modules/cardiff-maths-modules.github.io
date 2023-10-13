@@ -133,7 +133,7 @@ var display_info = function(module_checkbox) {
     // This function is used when the mouse hovers over a button.
     // This function takes in `module_checkbox`, an instance of the checkbox object
     // It fills in the side panel with information about the module selected
-    let code = module_checkbox.id
+    let code = module_checkbox.id.slice(0, 6)
     let year = module_checkbox.getAttribute('year')
     let title = module_checkbox.getAttribute('module_title')
     let credits = module_checkbox.getAttribute('credits')

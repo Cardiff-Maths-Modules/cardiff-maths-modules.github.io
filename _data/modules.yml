@@ -512,7 +512,17 @@
   prerequisites:
     - "MA2008"
     - "MA2500"
-    - "MA2800"
+    - "MA2502"
+
+- code: "MA3805f"
+  year: 3
+  title: "Quantitative Risk Management"
+  credits: 10
+  semester: 'Spring'
+  prerequisites:
+    - "MA2008"
+    - "MA2500"
+    - "MA2801"
 
 - code: "MA3901"
   year: 3

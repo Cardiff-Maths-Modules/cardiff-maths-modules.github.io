@@ -156,7 +156,7 @@
                                   module_code="{{ module.code }}"
                                   welsh_code="{{ module.welsh-code }}"
                                   core_indicator="{{ core_indicator }}"
-                               >{{ core_indicator }} {{ module.code }} {{ core_indicator }}
+                               >{{ core_indicator }} {{ module.code | slice: 0, 6 }} {{ core_indicator }}
                               </span>
                           </label>
                       </div>
