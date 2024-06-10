@@ -174,8 +174,6 @@
   title: "Vibrations and Waves"
   credits: 10
   semester: 'Autumn'
-  prerequisites:
-    - "MA1301"
 
 - code: "MA2320"
   year: 2
@@ -352,6 +350,15 @@
     - "MA1006"
     - "MA2006"
 
+- code: "MA3022"
+  year: 3
+  title: "Knot Theory"
+  credits: 10
+  semester: "Autumn"
+  welsh-code: "MA3052"
+  welsh-title: "Theori Clymau"
+  welsh-credits: 5
+
 - code: "MA3304"
   year: 3
   title: "Methods of Applied Mathematics"
@@ -459,8 +466,6 @@
   title: "Algorithms and Heuristics"
   credits: 10
   semester: 'Spring'
-  prerequisites:
-    - "MA1500"
   welsh-code: "MA3652"
   welsh-title: "Algorithmau a Dulliau Hewristig"
   welsh-credits: 5
@@ -510,7 +515,6 @@
   credits: 10
   semester: 'Spring'
   prerequisites:
-    - "MA2008"
     - "MA2500"
     - "MA2502"
 
@@ -520,7 +524,6 @@
   credits: 10
   semester: 'Spring'
   prerequisites:
-    - "MA2008"
     - "MA2500"
     - "MA2801"
 
@@ -562,6 +565,15 @@
     - "MA2001"
     - "MA2301"
     - "MA3305"
+
+- code: "MA4006"
+  year: 4
+  title: "Lie Algebras"
+  credits: 20
+  semester: 'Autumn'
+  prerequisites:
+    - "MA1008"
+    - "MA2008"
 
 - code: "MA4016"
   year: 4
