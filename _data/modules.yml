@@ -95,33 +95,6 @@
   welsh-title: "Calcwlws Aml-Newidyn"
   welsh-credits: 5
 
-- code: "MA2003"
-  year: 2
-  title: "Complex Analysis"
-  credits: 10
-  semester: 'Spring'
-  prerequisites:
-    - "MA1005"
-    - "MA1006"
-  welsh-code: "MA2053"
-  welsh-title: "Dadansoddi Cymhlyg"
-  welsh-credits: 5
-
-- code: "MA2004"
-  year: 2
-  title: "Series and Transforms"
-  credits: 10
-  semester: 'Spring'
-  prerequisites:
-    - "MA1001"
-    - "MA1005"
-    - "MA1006"
-    - "MA1008"
-    - "MA2008"
-  welsh-code: "MA2054"
-  welsh-title: "Cyfresi a Thrawsffurfiau"
-  welsh-credits: 5
-
 - code: "MA2006"
   year: 2
   title: "Real Analysis"
@@ -146,6 +119,20 @@
   welsh-title: "Algebra Llinol II"
   welsh-credits: 10
 
+- code: "MA2009"
+  year: 2
+  title: "Complex Analysis and Functional Series"
+  credits: 20
+  semester: "Spring"
+  prerequisites:
+    - "MA1001"
+    - "MA1005"
+    - "MA1006"
+    - "MA1008"
+  welsh-code: "MA2059"
+  welsh-title: "Dadansoddi Cymhlyg a Chyfresi Ffwythiannol"
+  welsh-credits: 10
+
 - code: "MA2011"
   year: 2
   title: "Introduction to Number Theory I"
@@ -160,6 +147,7 @@
   prerequisites:
     - "MA1005"
     - "MA1008"
+    - "MA2008"
 
 - code: "MA2301"
   year: 2
@@ -182,6 +170,7 @@
   semester: 'Spring'
   prerequisites:
     - "MA1001"
+    - "MA1006"
 
 - code: "MA2500"
   year: 2
@@ -219,19 +208,21 @@
     - "MA1006"
   welsh-code: "MA2651"
   welsh-title: "Ymchwil Weithrediadol"
-  welsh-credits: 5
+  welsh-credits: 10
 
 - code: "MA2701"
   year: 2
   title: "Numerical Analysis"
   credits: 10
   semester: 'Autumn'
+  prerequisites:
+    - "MA2008"
 
 - code: "MA2760"
   year: 2
   title: "Mathematical Investigations with Python"
   credits: 10
-  semester: 'Spring'
+  semester: 'Autumn'
   prerequisites:
     - "MA1003"
 
@@ -252,6 +243,8 @@
     - "MA1006"
     - "MA1500"
     - "MA1501"
+    - "MA2008"
+    - "MA2500"
 
 - code: "MA2900"
   year: 2
@@ -273,12 +266,6 @@
     - "MA1008"
     - "MA2006"
     - "MA2008"
-
-- code: "MA3007"
-  year: 3
-  title: "Coding Theory"
-  credits: 10
-  semester: 'Spring'
 
 - code: "MA3008"
   year: 3
@@ -355,6 +342,10 @@
   title: "Knot Theory"
   credits: 10
   semester: "Autumn"
+  prerequisites:
+    - "MA1005"
+    - "MA1008"
+    - "MA2008"
   welsh-code: "MA3052"
   welsh-title: "Theori Clymau"
   welsh-credits: 5
@@ -375,9 +366,6 @@
   title: "Fluid Dynamics"
   credits: 20
   semester: "Autumn"
-  prerequisites:
-    - "MA1301"
-    - "MA2301"
 
 - code: "MA3312"
   year: 3
@@ -424,14 +412,6 @@
   welsh-title: "Modiwl Prosiect (Hanner Blwyddyn)"
   welsh-credits: 10
 
-- code: "MA3502"
-  year: 3
-  title: "Regression Analysis and Experimental Design"
-  credits: 20
-  semester: "Spring"
-  prerequisites:
-    - "MA1501"
-
 - code: "MA3503"
   year: 3
   title: "Stochastic Processes for Finance and Insurance"
@@ -439,14 +419,6 @@
   semester: "Autumn"
   prerequisites:
     - "MA2500"
-
-- code: "MA3504"
-  year: 3
-  title: "Official Statistics"
-  credits: 10
-  semester: 'Autumn'
-  prerequisites:
-    - "MA1501"
 
 - code: "MA3506"
   year: 3
@@ -461,11 +433,27 @@
     - "MA2008"
     - "MA2500"
 
+- code: "MA3507"
+  year: 3
+  title: "Statistical Modelling"
+  credits: 20
+  semester: 'Spring'
+  prerequisites:
+    - "MA2502"
+
+- code: "MA3508"
+  year: 3
+  title: "Time Series"
+  credits: 10
+  semester: 'Spring'
+  prerequisites:
+    - "MA1501"
+
 - code: "MA3602"
   year: 3
   title: "Algorithms and Heuristics"
   credits: 10
-  semester: 'Spring'
+  semester: 'Autumn'
   welsh-code: "MA3652"
   welsh-title: "Algorithmau a Dulliau Hewristig"
   welsh-credits: 5
@@ -474,7 +462,7 @@
   year: 3
   title: "Optimisation"
   credits: 20
-  semester: "Autumn"
+  semester: "Spring"
   prerequisites:
     - "MA2008"
 
@@ -482,7 +470,7 @@
   year: 3
   title: "Game Theory"
   credits: 10
-  semester: 'Spring'
+  semester: 'Autumn'
 
 - code: "MA3800"
   year: 3
@@ -497,8 +485,6 @@
   title: "Market Microstructure and Trading Theory"
   credits: 10
   semester: 'Autumn'
-  prerequisites:
-    - "MA2800"
 
 - code: "MA3804"
   year: 3
@@ -515,17 +501,9 @@
   credits: 10
   semester: 'Spring'
   prerequisites:
+    - "MA2008"
     - "MA2500"
     - "MA2502"
-
-- code: "MA3805f"
-  year: 3
-  title: "Quantitative Risk Management"
-  credits: 10
-  semester: 'Spring'
-  prerequisites:
-    - "MA2500"
-    - "MA2801"
 
 - code: "MA3901"
   year: 3
@@ -536,122 +514,35 @@
   welsh-title: "Cyflwyniad i Addysgu Mathemateg mewn Ysgol Uwchradd"
   welsh-credits: 20
 
-- code: "MA3903"
-  year: 3
-  title: "Reading Module"
-  credits: 10
-  semester: 'Autumn'
-  welsh-code: "MA3952"
-  welsh-title: "Modiwl Darllen"
-  welsh-credits: 10
-
 - code: "MA3701"
   year: 3
   title: "Mathematics of Artificial Intelligence"
   credits: 10
   semester: 'Autumn'
   prerequisites:
-    - "MA1003"
-    - "MA1500"
     - "MA2001"
     - "MA2008"
-
-- code: "MA4003"
-  year: 4
-  title: "Theoretical Fluid Dynamics"
-  credits: 20
-  semester: 'Spring'
-  prerequisites:
-    - "MA2001"
-    - "MA2301"
-    - "MA3305"
 
 - code: "MA4006"
   year: 4
   title: "Lie Algebras"
   credits: 20
-  semester: 'Autumn'
+  semester: 'Spring'
   prerequisites:
     - "MA1008"
     - "MA2008"
 
-- code: "MA4016"
+- code: "MA4010"
   year: 4
-  title: "Quantum Information"
+  title: "Spectral Theory and Applications"
   credits: 20
-  semester: 'Spring'
+  semester: 'Autumn'
   prerequisites:
+    - "MA2003"
+    - "MA2006"
     - "MA2008"
-
-- code: "MA4309"
-  year: 4
-  title: "Mathematical Biology"
-  credits: 20
-  semester: 'Autumn'
-
-- code: "MA4511"
-  year: 4
-  title: "Statistics of Big Data"
-  credits: 20
-  semester: "Both"
-  prerequisites:
-    - "MA2500"
-    - "MA3502"
-
-- code: "MA4512"
-  year: 4
-  title: "Credit Risk Scoring"
-  credits: 10
-  semester: 'Spring'
-
-- code: "MA4514"
-  year: 4
-  title: "Statistical Programming with R and Shiny"
-  credits: 10
-  semester: 'Spring'
-
-- code: "MA4601"
-  year: 4
-  title: "Stochastic Search and Optimisation"
-  credits: 20
-  semester: 'Spring'
-  prerequisites:
-    - "MA2500"
-
-- code: "MA4606"
-  year: 4
-  title: "Supply Chain Modelling"
-  credits: 10
-  semester: 'Spring'
-
-- code: "MA4609"
-  year: 4
-  title: "Healthcare Modelling"
-  credits: 10
-  semester: 'Spring'
-  prerequisites:
-    - "MA2601"
-
-- code: "MA4900"
-  year: 4
-  title: "MMath Project"
-  credits: 40
-  welsh-code: "MA4970"
-  welsh-title: "Prosiect MMath"
-  welsh-credits: 40
-  semester: 'Both'
-
-- code: "MA4901"
-  year: 4
-  title: "Reading Module"
-  credits: 20
-  semester: 'Autumn'
-
-- code: "MA4902"
-  year: 4
-  title: "Reading Module"
-  credits: 20
-  semester: 'Spring'
+    - "MA3005"
+    - "MA3018"
 
 - code: "MA4023"
   year: 4
@@ -673,4 +564,69 @@
     - "MA2001"
     - "MA2004"
     - "MA2006"
+
+- code: "MA4309"
+  year: 4
+  title: "Mathematical Biology"
+  credits: 20
+  semester: 'Autumn'
+
+- code: "MA4508"
+  year: 4
+  title: "Time Series"
+  credits: 10
+  semester: 'Spring'
+  prerequisites:
+    - "MA1501"
+
+- code: "MA4514"
+  year: 4
+  title: "Statistical Programming with R and Shiny"
+  credits: 10
+  semester: 'Spring'
+
+- code: "MA4601"
+  year: 4
+  title: "Stochastic Search and Optimisation"
+  credits: 20
+  semester: 'Spring'
+  prerequisites:
+    - "MA2500"
+    - "MA2601"
+
+- code: "MA4609"
+  year: 4
+  title: "Healthcare Modelling"
+  credits: 10
+  semester: 'Spring'
+  prerequisites:
+    - "MA2601"
+
+- code: "MA4700"
+  year: 4
+  title: "Mathematical Methods for Data Mining"
+  credits: 10
+  semester: 'Spring'
+
+- code: "MA4900"
+  year: 4
+  title: "MMath Project"
+  credits: 40
+  welsh-code: "MA4970"
+  welsh-title: "Prosiect MMath"
+  welsh-credits: 40
+  semester: 'Both'
+
+- code: "MA4901"
+  year: 4
+  title: "Reading Module"
+  credits: 20
+  semester: 'Autumn'
+  prerequisites:
     - "MA3005"
+
+- code: "MA4902"
+  year: 4
+  title: "Reading Module"
+  credits: 20
+  semester: 'Spring'
