@@ -9,6 +9,7 @@ var update_counter = function(module_checkbox) {
     //     + add a tick or cross emoji if the number of credits for that year
     //       is either 120 (tick) or over 120 (cross);
     //     + call `update_subsequent_modules` to disable or enable the approproate modules.
+    
     var emoji = ''
     let year = module_checkbox.getAttribute('year')
     let credits = parseInt(module_checkbox.getAttribute('credits'))
@@ -51,6 +52,7 @@ var all_prerequisites_checked = function(module_checkbox) {
     // This function takes in `module_checkbox`, an instance of the checkbox object
     // and returns a Boolean indicating if _all_ its prerequisites are checked or not
     prerequisites_string = module_checkbox.getAttribute('prerequisites')
+    console.log(module_checkbox.getAttribute('id'), prerequisites_string)
     if (prerequisites_string == ''){
         return true;
     }else{

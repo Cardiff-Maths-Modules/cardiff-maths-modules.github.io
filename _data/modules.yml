@@ -538,7 +538,6 @@
   credits: 20
   semester: 'Autumn'
   prerequisites:
-    - "MA2003"
     - "MA2006"
     - "MA2008"
     - "MA3005"
@@ -548,7 +547,7 @@
   year: 4
   title: "Calculus of Variations"
   credits: 20
-  semester: 'Autumn'
+  semester: 'Spring'
   prerequisites:
     - "MA2001"
 
@@ -562,7 +561,6 @@
     - "MA1005"
     - "MA1006"
     - "MA2001"
-    - "MA2004"
     - "MA2006"
 
 - code: "MA4309"
